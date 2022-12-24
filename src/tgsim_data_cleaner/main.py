@@ -2,25 +2,38 @@ import pandas as pd
 import sys
 import cleaner as cl
 import graph as gr
+import argparse
 
-ARGUMENT_COUNT = 3
-if(len(sys.argv) != ARGUMENT_COUNT):
-    print("Please ")
+# Parse input 
+parser = argparse.ArgumentParser()
+parser.add_argument("input_excel_filename", help="the name of the excel file to process")
+parser.add_argument("input_csv_filename", help="the name of the csv file to process")
+parser.add_argument("output_filename", help="the name of the file to output")
+args = parser.parse_args()
 
-fix_excel_name = sys
+if not args.input_excel_filename:
+    parser.error("the following argument is required: input_excel_filename")
+if not args.input_csv_filename:
+    parser.error("the following argument is required: input_csv_filename")
+if not args.output_filename:
+    parser.error("the following argument is required: output_filename")
 
-# Open excel file 
-fixes = pd.read_excel('ScriptTest1_Fixes.xlsx')
-raw_data = pd.read_csv('test1.csv')
+input_excel_filename = args.input_excel_filename
+input_csv_filename = args.input_csv_filename
+output_filename = args.output_filename
+
+# Open input files
+fixes = pd.read_excel(input_excel_filename)
+raw_data = pd.read_csv(input_csv_filename)
 raw_data = raw_data.rename(columns={ raw_data.columns[0]: "id" })
 
 # Splice for useful information
 fixes = fixes.loc[:,['Initial ID','Changed ID', 'Time First Seen']].dropna()
 
-# Sort by Time 
+# Sort Rows by Time 
 fixes = fixes.sort_values(by=['Time First Seen'])
 
-#Construct graph 
+# Apply Fixes
 graph = {}
 invalid_fixes = []
 redundant_fixes = []
@@ -50,7 +63,7 @@ for index, row in fixes.iterrows():
 cl.PrintInvalidFixes(invalid_fixes) 
 cl.PrintRedundantFixes(redundant_fixes)
 
-raw_data.to_csv('output_01.csv', index=False)
+raw_data.to_csv(output_filename, index=False, chunksize=1000000)
 
 print('PROCESS COMPLETE')
 
