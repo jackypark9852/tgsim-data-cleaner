@@ -2,7 +2,7 @@
 
 ## 1. About
 
-A simple CLI tool that streamlines the process of cleaning TGSIM data
+A simple CLI tool that streamlines the process of cleaning TGSIM data. 
 
 The current process of cleaning vehicle recognition data includes:
 
@@ -24,7 +24,7 @@ Download links (no installation required):
 
 1. Use `Errors_template.xlxs` as the template for recording errors
 
-Instructions:
+Excel columns instructions:
 | **Column Name** | **Description** |
 |----------|----------|
 | Initial ID | Car's initial ID |
@@ -33,3 +33,12 @@ Instructions:
 | Changed ID | Car's Changed ID |
 | Frame First Seen | Frame number where the car was first observed with the changed ID |
 | Time First Seen | Calculated from `Frame First Seen` (Do not alter cell content)|
+
+2. To apply changes to raw data run the following command:
+```
+./tgsim_data_cleaner <input_errors_excel_file_name> <input_raw_data_csv_name> <output_cleaned_data_csv_name> 
+```
+
+## 4. Example 
+
+
