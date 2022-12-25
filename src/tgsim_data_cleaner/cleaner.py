@@ -20,6 +20,8 @@ def FixId(initial_id: int, changed_id: int, time_first_seen_seconds: float, raw_
 
 
 def PrintInvalidFixes(invalid_fixes):
+    if len(invalid_fixes) == 0:
+        return
     print("ERROR - THE FOLLOWING FIXES WERE INVALID:")
     print("Index   Initial Id   Changed Id      Time First Seen")
     for index, initial_id, changed_id, time_first_seen in invalid_fixes:
@@ -28,6 +30,8 @@ def PrintInvalidFixes(invalid_fixes):
 
 
 def PrintRedundantFixes(redundant_fixes):
+    if len(redundant_fixes) == 0:
+        return
     print("WARNING - THE FOLLOWING FIXES WERE REDUDANT: ")
     print("Index   Initial Id   Changed Id      Time First Seen")
     for index, initial_id, changed_id, time_first_seen in redundant_fixes:
