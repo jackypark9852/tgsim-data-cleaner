@@ -16,9 +16,9 @@ This tool will help researchers speed up the data cleaning process by automating
 
 Download links (no installation required):
 
-- For Windows users: Download Link
-- For Linux users: [Download link](https://docs.google.com/uc?export=download&id=1Ihf-7RuiSz6k9EIVr7AMmdJMrEyD9kR2)
-- For Mac users: Download link
+- For Windows users: [Download](https://docs.google.com/uc?export=download&id=1BlDuae0BnimiP4EpAVQYoRJa-_SOmzUn)
+- For Linux users: [Download](https://docs.google.com/uc?export=download&id=1Ihf-7RuiSz6k9EIVr7AMmdJMrEyD9kR2)
+- For Mac users: Coming soon
 
 ## 3. Usage
 
@@ -32,7 +32,8 @@ Excel columns instructions:
 | Time Last Seen | Calculated from `Frame Last Seen` (Do not alter cell content)|
 | Changed ID | Car's Changed ID |
 | Frame First Seen | Frame number where the car was first observed with the changed ID |
-| Time First Seen | Calculated from `Frame First Seen` (Do not alter cell content)|0 Exma
+| Time First Seen | Calculated from `Frame First Seen` (Do not alter cell content)|
+| Start Frame | Frame number of the `first frame` of the data set | 
 
 2. To apply changes to raw data run the following command:
 ```
