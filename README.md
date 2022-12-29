@@ -17,7 +17,7 @@ This tool will help researchers speed up the data cleaning process by automating
 Download links (no installation required):
 
 - For Windows users: Download Link
-- For Linux users: (Download link)[https://docs.google.com/uc?export=download&id=1Ihf-7RuiSz6k9EIVr7AMmdJMrEyD9kR2]
+- For Linux users: [Download link](https://docs.google.com/uc?export=download&id=1Ihf-7RuiSz6k9EIVr7AMmdJMrEyD9kR2)
 - For Mac users: Download link
 
 ## 3. Usage
