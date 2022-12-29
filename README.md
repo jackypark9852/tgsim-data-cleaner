@@ -63,5 +63,11 @@ Excel columns instructions:
 
 ![image](https://user-images.githubusercontent.com/81858354/209454155-dfdfb362-53ef-4853-a903-760445673c00.png)
 
-## 5. Contact 
+## 5. Troubleshooting 
+1. What should I do if there are `Invalid Fixes`? 
+- This means either the program is not capable of handling such fix, or the fix was inputted incorrectly 
+- The most likely cause of this error is when user is trying to apply fixes addressing  two cars' ids being swapped. 
+- Remove the corresponding fix from the excel file and rerun the program 
+
+## 6. Contact 
 If you have any questions or need assistance, please contact me at jackypark9852@gmail.com or TGSIM Slack!
